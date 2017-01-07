@@ -61,19 +61,22 @@ Ext.onReady(function() {
 			
 		}, {
 			text:'姓名',
-			dataIndex:'name'	
+			dataIndex:'name'
 		},{
 			text:'帳戶權限',
 			dataIndex:'permission'	
 		},{
 			text:'帳戶名稱',
-			dataIndex:'account'	
+			dataIndex:'account'	,
+			width: 150
 		},{
 			text:'帳戶密碼',
-			dataIndex:'password'	
+			dataIndex:'password',
+			width: 150
 		},{
 			text:'職位',
-			dataIndex:'position'	
+			dataIndex:'position',
+			width: 150
 		}],
 		dockedItems:[{ 
 			xtype: 'toolbar', 
@@ -81,10 +84,13 @@ Ext.onReady(function() {
 			items: [{
 					xtype:'textfield',
 					fieldLabel: '*姓名',
-					id :'name'
+					labelAlign: 'right',
+					id :'name',
+					margin:'3 0 3 0'
 				},{
 					xtype:'numberfield',
 					fieldLabel: '*帳戶權限',
+					labelAlign: 'right',
 					id :'acc_permission',
 					maxValue: 3,
 					minValue: 2
@@ -100,11 +106,14 @@ Ext.onReady(function() {
 				}, */{
 					xtype:'textfield',
 					fieldLabel: '*帳戶密碼',
-					id :'password'
+					labelAlign: 'right',
+					id :'password',
+					margin:'3 0 3 0'
 				},{
 					xtype:'combo',
 					fieldLabel: '職位',
-					id :'permission_temp',
+					labelAlign: 'right',
+					id :'permission_t',
 					store:permission_store,
 					displayField:'position_qq',
 					valueField:'id'
@@ -117,6 +126,8 @@ Ext.onReady(function() {
 					xtype:'button',
 					text: '確定新增',
 					scale: 'medium',
+					padding: '0 20 0 20',
+					margin:'0 0 10 420',
 					style:{
 						'background-color':'#ECECEC',
 						'border': '1px solid blue'
@@ -133,7 +144,7 @@ Ext.onReady(function() {
 										name:		Ext.getCmp('name').getValue(),
 										permission:		Ext.getCmp('acc_permission').getValue(),
 										password:		Ext.getCmp('password').getValue(),
-										permission_id:		Ext.getCmp('permission_temp').getValue()
+										permission_id:		Ext.getCmp('permission_t').getValue()
 									},
 									success:function(){
 										Ext.Msg.alert('','成功');
@@ -167,9 +178,13 @@ Ext.onReady(function() {
 			})
 		],
 		columns: [{
+			text:'ID',
+			dataIndex:'id'
+			
+		},{
 			text:'姓名',
 			dataIndex:'name',
-			 editor: {
+			editor: {
                 // defaults to textfield if no xtype is supplied
                 allowBlank: false
             } 
@@ -187,6 +202,7 @@ Ext.onReady(function() {
 		},{
 			text:'帳戶名稱',
 			dataIndex:'account',
+			width: 150
 			/* editor: {
                 // defaults to textfield if no xtype is supplied
                 allowBlank: false
@@ -194,6 +210,7 @@ Ext.onReady(function() {
 		},{
 			text:'帳戶密碼',
 			dataIndex:'password',
+			width: 150
 			/* editor: {
                 // defaults to textfield if no xtype is supplied
                 allowBlank: false
@@ -201,6 +218,7 @@ Ext.onReady(function() {
 		},{
 			text:'職位',
 			dataIndex:'permission_id',
+			width: 150,
 			editor: {
                 // defaults to textfield if no xtype is supplied
                  xtype:'combo',
@@ -221,9 +239,14 @@ Ext.onReady(function() {
 				'background':'#ADD8E6'
 			},   */
 			items: [{
+					xtype:'text',
+					text:'請直接點擊資料進行修改',
+					padding:'10 30 10 10'
+					},{
 					xtype:'button',
 					text:'儲存更新',
 					scale: 'medium',
+					padding: '0 20 0 20',
 					style:{
 						'background-color':'#ECECEC',
 						'border': '1px solid blue'
@@ -271,19 +294,22 @@ Ext.onReady(function() {
 			
 		}, {
 			text:'姓名',
-			dataIndex:'name'	
+			dataIndex:'name'
 		},{
 			text:'帳戶權限',
 			dataIndex:'permission'	
 		},{
 			text:'帳戶名稱',
-			dataIndex:'account'	
+			dataIndex:'account'	,
+			width: 150
 		},{
 			text:'帳戶密碼',
-			dataIndex:'password'	
+			dataIndex:'password',
+			width: 150
 		},{
 			text:'職位',
-			dataIndex:'position'	
+			dataIndex:'position',
+			width: 150
 		}],
 		tbar:[{
 			xtype:'text',
