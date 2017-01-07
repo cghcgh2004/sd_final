@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="extjs-4.2.1/resources/css/ext-all.css" />
 		<script type="text/javascript" src="extjs-4.2.1/ext-all.js"></script>
 			<title>薪資計算及管理系統</title>
-			<script ="text/javascript" src="test.js" ></script>
+			<script ="text/javascript" src="homepage.js" ></script>
 		  
 	  </head>
 	<body>
