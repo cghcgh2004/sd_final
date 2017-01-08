@@ -127,7 +127,8 @@ var conPanel = Ext.create('Ext.grid.Panel', {
 	}],
 	listeners: {
 		itemclick: function(grid, record, tr, rowIndex, e, eOpts) {
-			window.open(record.get("url"));
+			openurl('POST',record.get("url"),{account:Ext.getCmp('account').getValue(),password:Ext.getCmp('password').getValue()},'_blank');
+			//window.open(record.get("url"));
 		}
 	}
 }); 
